@@ -9,12 +9,17 @@ import {
 import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
+// import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root> ,
+    // errorElement:<ErrorPage></ErrorPage>,
+    // errorElement:<ErrorPage></ErrorPage>,
+    // ErrorBoundary:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
