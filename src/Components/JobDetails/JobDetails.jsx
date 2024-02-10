@@ -17,10 +17,18 @@ const JobDetails = () => {
                     <p className="text-2xl p-2"> Job Type:{job.remote_or_onsite}</p>
                     <p className="text-2xl m-2 p-2">Description of the job:{job.job_description}</p>
                     <p className="text-2xl m-2 p-2">Responsibilites:{job.job_responsibility}</p>
-                    <p className="text-2xl"></p>
+                    <p className="text-2xl m-2 p-2">Educational Requirements:{job.educational_requirements} </p>
+                    <p className="text-2xl m-2 p-2">Experiences:{job.experiences}</p>
+                    <p className="text-2xl m-2 p-2">Salary:{job.salary} </p>
                 </div>
                 <div className="border">
                     <h2 className="text-2xl">Details</h2>
+                    <p className="text-2xl m-2 p-2">Salary:{job.salary}</p>
+                    <p className="text-2xl m-2 p-2">Job Type:{job.remote_or_onsite}</p>
+                    <p className="text-2xl m-2 p-2">Contact Number:{job.contact_information.phone}</p>
+                    
+                    <p className="text-2xl m-2 p-2">Email:{job.contact_information.email}</p>
+                    <p className="text-2xl m-2 p-2">Address:{job.contact_information.address}</p>
                     <button className="btn btn-info w-full">Apply goddammit</button>
                 </div>
 
