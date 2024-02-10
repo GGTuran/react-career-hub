@@ -26,7 +26,7 @@ const FeaturedJobs = () => {
                     jobs.slice(0, dataLength).map(job => <Job job={job} key={job.id}></Job>)
                 }
             </div>
-            <div className={dataLength === jobs.length && "hidden"}>
+            <div className={dataLength === jobs.length ? "hidden" : "text-center"}>
                 <button 
                 onClick={() => setDataLength(jobs.length)} className="btn  btn-ghost">Show All</button>
             </div>
