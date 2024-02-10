@@ -3,7 +3,7 @@
 const Banner = () => {
     return (
         <div>
-            <h2>Make Banner</h2>
+            <h2 className="text-5xl text-center">Make Banner</h2>
         </div>
     );
 };
