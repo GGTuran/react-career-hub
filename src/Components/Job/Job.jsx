@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { IoLocationOutline } from "react-icons/io5";
+import { CiDollar } from "react-icons/ci";
 import PropTypes from 'prop-types';
 
 const Job = ({job}) => {
@@ -14,8 +15,9 @@ const Job = ({job}) => {
         <button className='px-5 py-2 font-extrabold border rounded border-gray-400 text-gray-900 mr-4'>{remote_or_onsite}</button>
         <button className='px-5 py-2 font-extrabold border rounded border-gray-400  text-gray-900 mr-4'>{job_type}</button>
     </div>
-    <div className="m-2">
+    <div className="m-2 flex">
       <h2 className="flex mr-3"><IoLocationOutline className="text-2xl"></IoLocationOutline> {location}</h2>
+      <h2 className="flex"> <CiDollar className="text-2xl"></CiDollar> {salary}</h2>
     </div>
     <div className="card-actions ">
       <button className="btn btn-primary">View Details</button>
