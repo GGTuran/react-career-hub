@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+
 import { IoLocationOutline } from "react-icons/io5";
 import { CiDollar } from "react-icons/ci";
 import PropTypes from 'prop-types';
@@ -6,6 +7,9 @@ import { Link } from "react-router-dom";
 
 const Job = ({job}) => {
     const{id , logo, job_title, company_name, remote_or_onsite, location, job_type, salary, job_description, job_responsibility, educational_requirements, experience, contact_information, phone, email, address } = job;
+
+    
+
     return (
         <div className="card card-compact  bg-base-100 shadow-xl">
   <figure><img src={logo} alt="Shoes" /></figure>
@@ -22,9 +26,10 @@ const Job = ({job}) => {
       <h2 className="flex"> <CiDollar className="text-2xl"></CiDollar> {salary}</h2>
     </div>
     <div className="card-actions ">
-      <Link to={`/job/${id}`}><button className="btn btn-outline">View Details</button></Link>
+      <Link to={`/job/${id}`}><button  className="btn btn-outline">View Details</button></Link>
     </div>
   </div>
+  
 </div>
     );
 };
