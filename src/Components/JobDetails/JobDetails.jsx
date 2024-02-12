@@ -10,7 +10,7 @@ const JobDetails = () => {
     const job = jobs.find(job => job.id === idInt);
     console.log(job);
     const handleApplyJob = () =>{
-        saveJobApplication(id);
+        saveJobApplication(idInt);
         toast('Apply korsos bap eibar ja')
       }
     return (
