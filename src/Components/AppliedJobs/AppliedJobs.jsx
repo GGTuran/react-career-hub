@@ -34,7 +34,7 @@ const AppliedJobs = () => {
 
 
                     appliedJobs.map(job => <li key={job.id}>
-                        <span>{job.job_title} for {job.company_name}</span>
+                        <span>{job.job_title} for {job.company_name}</span> <span> with {job.salary}$ salary</span>
                     </li>)
 
 
