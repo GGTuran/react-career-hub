@@ -9,6 +9,20 @@ const AppliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([]);
     const [displayJobs, setDisplayJobs] = useState([]);
 
+    const handleJobsFilther = filter =>{
+        if(filter === 'all'){
+            setDisplayJobs(appliedJobs);
+        }
+        else if (filter === 'remote'){
+            const remoteJobs = appliedJobs.filter(job => job.remote_onsite === "Remote");
+            setDisplayJobs(remoteJobs);
+        }
+        else if (filter === 'onsite'){
+            const onsiteJobs = appliedJobs.filter(job => job.remote_onsite === "Onsite" );
+            setDisplayJobs(onsiteJobs);
+        }
+    }
+
     useEffect( () =>{
         const storedJobIds = getStoredJobApplication();
         if(jobs.length > 0){
@@ -43,7 +57,7 @@ const AppliedJobs = () => {
                 {
 
 
-                    appliedJobs.map(job => <li key={job.id}>
+                    displayJobs.map(job => <li key={job.id}>
                         <span>{job.job_title} for {job.company_name}</span> <span> with {job.salary}$ salary</span> <span>{job.remote_or_onsite}</span>
                     </li>)
 
