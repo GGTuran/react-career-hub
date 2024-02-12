@@ -7,6 +7,7 @@ const AppliedJobs = () => {
     const jobs = useLoaderData();
 
     const [appliedJobs, setAppliedJobs] = useState([]);
+    const [displayJobs, setDisplayJobs] = useState([]);
 
     useEffect( () =>{
         const storedJobIds = getStoredJobApplication();
@@ -22,6 +23,7 @@ const AppliedJobs = () => {
             }
             // console.log(jobsApplied)
             setAppliedJobs(jobsApplied);
+            setDisplayJobs(jobsApplied);
 
         }
          
@@ -30,7 +32,7 @@ const AppliedJobs = () => {
         <div>
             <h2 className="text-2xl">Jobs i did apply:{appliedJobs.length}</h2>
             <details className="dropdown">
-                <summary className="m-1 btn">open or close</summary>
+                <summary className="m-1 btn">Remote or Onsite</summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                 <li><a>All</a></li>
                 <li><a>Remote</a></li>
