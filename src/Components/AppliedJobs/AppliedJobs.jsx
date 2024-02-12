@@ -28,7 +28,7 @@ const AppliedJobs = () => {
     } , [])
     return (
         <div>
-            <h2>Jobs i did apply:{appliedJobs}</h2>
+            <h2 className="text-2xl">Jobs i did apply:{appliedJobs.length}</h2>
         </div>
     );
 };
