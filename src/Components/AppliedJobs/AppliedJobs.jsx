@@ -42,12 +42,11 @@ const AppliedJobs = () => {
 
         }
          
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     } , [])
     return (
         <div>
-            <Helmet>
-                    <title>Carrer hub/Applied Job</title>
-            </Helmet>
+            
             <h2 className="text-2xl">Jobs i did apply:{appliedJobs.length}</h2>
             <details className="dropdown">
                 <summary className="m-1 btn">Remote or Onsite</summary>
