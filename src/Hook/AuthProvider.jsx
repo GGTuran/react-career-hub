@@ -13,7 +13,7 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
 
     const googleSignIn = () =>{
-        return signInWithPopup();
+        return signInWithPopup(auth, googleProvider);
     }
 
     const authInfo = {

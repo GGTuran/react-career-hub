@@ -13,6 +13,7 @@ import JobDetails from './Components/JobDetails/JobDetails';
 import { HelmetProvider } from 'react-helmet-async';
 import AuthProvider from './Hook/AuthProvider';
 import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 // import ErrorPage from './Components/ErrorPage/ErrorPage';
 // import ErrorPage from './Components/ErrorPage/ErrorPage';
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login></Login>
+      },
+      {
+        path:"/register",
+        element:<Register></Register>
       }
     ]
   },
