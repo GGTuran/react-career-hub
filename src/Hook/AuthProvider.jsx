@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext } from "react";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup } from "firebase/auth";
 import app from "./firebase.config";
 
 
@@ -14,6 +14,9 @@ const AuthProvider = ({ children }) => {
 
     const googleSignIn = () =>{
         return signInWithPopup(auth, googleProvider);
+    }
+    const signUp = (email, password) =>{
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const authInfo = {
