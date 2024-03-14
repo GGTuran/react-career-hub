@@ -1,6 +1,21 @@
+/* eslint-disable no-unused-vars */
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Hook/AuthProvider";
 
 
 const Register = () => {
+
+
+  const { signUp } = useContext(AuthContext);
+
+  const {email, setEmail} = useState(" ");
+  const {password, setPassword} = useState("");
+  const {error ,setError} = useState("");
+  const handleEmail = (text) =>{
+    setEmail(text.target.value);
+    console.log(email);
+  }
+
     return (
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -14,7 +29,7 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+                <input onChange={(e) => handleEmail(e)} name="email" type="email" placeholder="email" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">

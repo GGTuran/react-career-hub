@@ -21,6 +21,7 @@ const AuthProvider = ({ children }) => {
 
     const authInfo = {
         googleSignIn,
+        signUp,
     } ;
 
     return (
